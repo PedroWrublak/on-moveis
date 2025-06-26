@@ -24,7 +24,7 @@ function PageHeader() {
 
         {/* Menu */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#01187F] uppercase">
-          <Link href="#servicos">
+          <Link href="#services">
             <span className="hover:opacity-30">Serviços</span>
           </Link>
           <Link href="#galeria">
@@ -49,7 +49,7 @@ function PageHeader() {
           </span>
           <span 
           className={`absolute inset-0 transition-all duration-300 ease-in-out ${
-            menuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 scale-75 rotate-90"
+            menuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 rotate-90"
           }`}
           >
             <X size={28}/>
@@ -65,7 +65,7 @@ function PageHeader() {
         `}
       >
         <div className="md:hidden flex flex-col items-center bg-white shadow-md px-4 py-4 space-y-4 text-[#01187F]">
-          <Link href="#servicos" onClick={() => setMenuOpen(false)}>
+          <Link href="#services" onClick={() => setMenuOpen(false)}>
           <span className="block">
              Serviços
           </span>
