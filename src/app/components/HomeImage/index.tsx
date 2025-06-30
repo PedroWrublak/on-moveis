@@ -5,7 +5,7 @@ function HomeImage() {
     <div
       className="w-full h-[30rem] md:h-[40rem] bg-fixed bg-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: "url('/home-image-ex.jpg')",
+        backgroundImage: "url('/home-image-ex (2).jpg')",
       }}
     />
   );
