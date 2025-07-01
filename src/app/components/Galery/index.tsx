@@ -11,6 +11,9 @@ const images = [
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 4 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 5 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 6 " },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 7 " },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 8 " },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 " },
 ];
 
 function Galery() {
@@ -18,21 +21,21 @@ function Galery() {
 
   return (
     <section id="galery" className="py-20 px-4 max-w-6xl mx-auto">
-      <h2 className="text-4xl text-center text-white font-serif mb-12">
+      <h2 className="text-4xl text-center text-white font-serif mb-12 select-none">
         GALERIA
       </h2>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+      <div className="columns-1 sm:columns-2 md:columns-3 gap-2 space-y-3">
         {images.map((img, index) => (
           <div
             key={index}
-            className="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow"
+            className="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
             onClick={() => setSelectedImage(img.src)}
           >
             <img
               src={img.src}
               alt={img.alt}
-              className="w-full h-auto object-cover rounded-md hover:opacity-90 transition duration-300"
+              className="w-full h-auto object-cover rounded-xs hover:opacity-70 transition duration-300"
               loading="lazy" // Utilized to load the images after
             />
           </div>
@@ -43,7 +46,7 @@ function Galery() {
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 select-none"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

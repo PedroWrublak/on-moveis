@@ -27,11 +27,11 @@ function PageHeader() {
           <Link href="#services">
             <span className="hover:opacity-30">Serviços</span>
           </Link>
-          <Link href="#galeria">
+          <Link href="#galery">
             <span className="hover:opacity-30">Galeria</span>
           </Link>
-          <Link href="contato">
-            <span className="hover:opacity-30">Contato e Orçamento</span>
+          <Link href="#contact">
+            <span className="hover:opacity-30">Contact</span>
           </Link>
         </nav>
 
@@ -41,18 +41,22 @@ function PageHeader() {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span
-          className={`absolute inset-0 transition-all duration-300 ease-in-out ${
-            menuOpen ? "opacity-0 scale-75 rotate-90" : "opacity-100 scale-100 rotate-0"
-          }`}
+            className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+              menuOpen
+                ? "opacity-0 scale-75 rotate-90"
+                : "opacity-100 scale-100 rotate-0"
+            }`}
           >
-            <Menu size={28}/>
+            <Menu size={28} />
           </span>
-          <span 
-          className={`absolute inset-0 transition-all duration-300 ease-in-out ${
-            menuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 rotate-90"
-          }`}
+          <span
+            className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+              menuOpen
+                ? "opacity-100 scale-100 rotate-0"
+                : "opacity-0 scale-75 rotate-90"
+            }`}
           >
-            <X size={28}/>
+            <X size={28} />
           </span>
         </button>
       </div>
@@ -66,23 +70,16 @@ function PageHeader() {
       >
         <div className="md:hidden flex flex-col items-center bg-white shadow-md px-4 py-4 space-y-4 text-[#01187F]">
           <Link href="#services" onClick={() => setMenuOpen(false)}>
-          <span className="block">
-             Serviços
-          </span>
-           
+            <span className="block">Serviços</span>
           </Link>
-          <Link href="#galeria" onClick={() => setMenuOpen(false)}>
-          <span className="block">
-             Galeria
-          </span>
+          <Link href="#galery" onClick={() => setMenuOpen(false)}>
+            <span className="block">Galeria</span>
           </Link>
-          <Link href="#contato" onClick={() => setMenuOpen(false)}>
-          <span className="block">
-             Contato e Orçamentos
-          </span>
+          <Link href="#contact" onClick={() => setMenuOpen(false)}>
+            <span className="block">Contato e Orçamentos</span>
           </Link>
         </div>
-        </div>
+      </div>
     </header>
   );
 }

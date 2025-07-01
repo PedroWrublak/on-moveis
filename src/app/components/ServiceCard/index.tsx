@@ -10,7 +10,7 @@ function serviceCard({image, title, description}: ServiceCardProps) {
   return (
     <section id="services" className="scroll-mt-28">
 
-    <a href="#services">
+    <a href="#galery">
     <div className=" flex flex-col bg-white rounded-md overflow-hidden hover:opacity-70 transition-shadow">
       <div className="relative h-[15rem]">
         <Image
