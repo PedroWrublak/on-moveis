@@ -51,16 +51,16 @@ function Contact() {
 
   return (
     <section id="contact" className="scroll-mt-28">
-      <div className="bg-white p-20 max-w-3l mx-auto">
-        <h2 className="text-4xl text-center text-black font-serif mb-3 select-none">
+      <div className="bg-[#FCFCFC] p-20 max-w-3l mx-auto select-none">
+        <h2 className="text-3xl md:text-4xl text-center text-[#264653] font-serif mb-3">
           ENTRE EM CONTATO
         </h2>
-        <p className="text-center text-black mb-12">
+        <p className="text-center text-[#264653] mb-12">
           Solicite o orçamento para realizar seu sonho!
         </p>
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-2xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col gap-6 select-none"
+          className="w-full max-w-2xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col gap-6"
         >
           <input
             type="text"

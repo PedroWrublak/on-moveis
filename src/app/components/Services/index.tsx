@@ -36,8 +36,8 @@ const services = [
 
 function Services() {
   return (
-    <div className="flex flex-col items-center p-20 bg-white">
-      <h2 className="text-4xl text-center text-black font-serif mb-12 select-none">
+    <div className="flex flex-col items-center p-20 bg-[#FCFCFC]">
+      <h2 className="text-3xl md:text-4xl text-center text-[#264653] font-serif mb-12 select-none">
         SERVIÇOS
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">

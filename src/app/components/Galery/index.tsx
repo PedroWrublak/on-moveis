@@ -13,23 +13,22 @@ const images = [
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 6 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 7 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 8 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 " },
 ];
 
 function Galery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="galery" className="py-20 px-4 max-w-6xl mx-auto">
-      <h2 className="text-4xl text-center text-white font-serif mb-12 select-none">
+    <section id="galery" className="py-20 px-4 bg-gradient-to-b from-[#E1E7E1] to-[#F1EFE7]">
+      <h2 className="text-3xl md:text-4xl text-center text-[#264653] font-serif mb-12 select-none">
         GALERIA
       </h2>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 gap-2 space-y-3">
+      <div className="max-w-5xl mx-auto columns-1 sm:columns-2 md:columns-2 gap-2 space-y-3">
         {images.map((img, index) => (
           <div
             key={index}
-            className="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
+            className="border-3 break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
             onClick={() => setSelectedImage(img.src)}
           >
             <img

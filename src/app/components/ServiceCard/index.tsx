@@ -11,7 +11,7 @@ function serviceCard({image, title, description}: ServiceCardProps) {
     <section id="services" className="scroll-mt-28">
 
     <a href="#galery">
-    <div className=" flex flex-col bg-white rounded-md overflow-hidden hover:opacity-70 transition-shadow">
+    <div className="flex flex-col bg-white shadow-md hover:shadow-lg transition-shadow rounded-sm overflow-hidden hover:opacity-80">
       <div className="relative h-[15rem]">
         <Image
           src={image}
@@ -20,7 +20,7 @@ function serviceCard({image, title, description}: ServiceCardProps) {
           className="object-cover z-0"
         />
       </div>
-    <div className="p-6 text-center z-10 bg-[#D9E5DE] select-none">
+    <div className="p-3 text-center z-10 bg-neutral-100 select-none">
         <h2 className="text-2xl font-serif mb-2 text-black">{title}</h2>
         <p className="font-serif text-black">{description}</p>
     </div>

@@ -8,15 +8,15 @@ import { Menu, X } from "lucide-react";
 function PageHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-[#FCFCFC] shadow-sm">
       <div className="max-w-4xl h-[7rem] mx-auto px-4 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer">
             <Image
-              src="/logo-exemplo.png"
+              src="/logo.png"
               alt="Logo On-moveis"
               width={120}
-              height={60}
+              height={40}
               className="h-auto w-auto"
             />
           </div>
@@ -31,7 +31,7 @@ function PageHeader() {
             <span className="hover:opacity-30">Galeria</span>
           </Link>
           <Link href="#contact">
-            <span className="hover:opacity-30">Contact</span>
+            <span className="hover:opacity-30">Contato</span>
           </Link>
         </nav>
 
