@@ -1,45 +1,54 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { span } from "framer-motion/client";
 import { X } from "lucide-react";
 import { useState } from "react";
 
 const images = [
-  { src: "/lavan-ex2.jpg", alt: "Projeto 1 " },
-  { src: "/galery/living-room-ex.jpg", alt: "Projeto 2 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 3 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 4 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 5 " },
-  { src: "/lavan-ex.jpg", alt: "Projeto 6 " },
-  { src: "/banheiro-ex.jpg", alt: "Projeto 7 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 8 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 " },
+  { src: "/banheiro-ex.jpg", alt: "Projeto 1 ", span: 2 },
+
+  { src: "/galery/living-room-ex.jpg", alt: "Projeto 2 ", span: 1 },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 5 ", span: 1 },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 8 ", span: 1 },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 ", span: 1 },
+  { src: "/banheiro-ex.jpg", alt: "Projeto 6 ", span: 2 },
+  { src: "/lavan-ex2.jpg", alt: "Projeto 2 ", span: 2 },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 ", span: 1 },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 ", span: 1 },
 ];
 
 function Galery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="galery" className="py-20 px-4 bg-gradient-to-b from-[#a8a9a6] to-[#696967]">
+    <section
+      id="galery"
+      className="py-20 px-80 bg-gradient-to-b from-[#f5f5f5] to-[#eaeaea]"
+    >
       <h2 className="text-3xl md:text-4xl text-center text-[#545a5b] font-serif mb-12 select-none">
         GALERIA
       </h2>
 
-      <div className="mx-auto columns-1 sm:columns-2 md:columns-3 gap-2 space-y-3">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className=" break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
-            onClick={() => setSelectedImage(img.src)}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-auto object-cover rounded-xs hover:opacity-70 transition duration-300"
-              loading="lazy" // Utilized to load the images after
-            />
-          </div>
-        ))}
+      <div className="mx-auto columns-1 sm:columns-2 md:columns-3 gap-2 space-y-4">
+        {images.map((img, index) => {
+          return (
+            <div
+              key={index}
+              className=" break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
+              onClick={() => setSelectedImage(img.src)}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className={`w-full ${
+                  img.span === 2 ? "h-[61rem]" : "h-[30rem]"
+                } object-cover rounded-xs hover:opacity-70 transition duration-300`}
+                loading="lazy" // Utilized to load the images after
+              />
+            </div>
+          );
+        })}
       </div>
 
       {/* Modal */}
