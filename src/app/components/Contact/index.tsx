@@ -10,10 +10,11 @@ function Contact() {
     email: "",
     telefone: "",
     ambiente: "",
+    info: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -33,14 +34,15 @@ function Contact() {
                 name: form.name,
                 email: form.email,
                 telefone: form.telefone,
-                ambiente: form.ambiente
+                ambiente: form.ambiente,
+                info: form.info
             },
             "oPlQGIylC90OJt4sP",
         );
 
         console.log("Email enviado:", response.status);
         setSuccess(true);
-        setForm({name: "", email: "", telefone: "", ambiente: ""});
+        setForm({name: "", email: "", telefone: "", ambiente: "", info: ""});
     } catch (error) {
         console.error("Erro ao enviar", error);
     }
@@ -105,6 +107,15 @@ function Contact() {
             <option value="Escritório">Escritório</option>
             <option value="Outro">Outro</option>
           </select>
+          <textarea
+            name="info"
+            placeholder="Deixe uma mensagem adicional"
+            required
+            value={form.info}
+            onChange={handleChange}
+            rows={5}
+            className={`${inputStyle} resize-none`}
+          />
 
           <button
           type="submit"

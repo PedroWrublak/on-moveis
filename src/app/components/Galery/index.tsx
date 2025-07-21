@@ -5,30 +5,31 @@ import { X } from "lucide-react";
 import { useState } from "react";
 
 const images = [
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 1 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 2 " },
+  { src: "/lavan-ex2.jpg", alt: "Projeto 1 " },
+  { src: "/galery/living-room-ex.jpg", alt: "Projeto 2 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 3 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 4 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 5 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 6 " },
-  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 7 " },
+  { src: "/lavan-ex.jpg", alt: "Projeto 6 " },
+  { src: "/banheiro-ex.jpg", alt: "Projeto 7 " },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 8 " },
+  { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 9 " },
 ];
 
 function Galery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="galery" className="py-20 px-4 bg-gradient-to-b from-[#E1E7E1] to-[#F1EFE7]">
-      <h2 className="text-3xl md:text-4xl text-center text-[#264653] font-serif mb-12 select-none">
+    <section id="galery" className="py-20 px-4 bg-gradient-to-b from-[#a8a9a6] to-[#696967]">
+      <h2 className="text-3xl md:text-4xl text-center text-[#545a5b] font-serif mb-12 select-none">
         GALERIA
       </h2>
 
-      <div className="max-w-5xl mx-auto columns-1 sm:columns-2 md:columns-2 gap-2 space-y-3">
+      <div className="mx-auto columns-1 sm:columns-2 md:columns-3 gap-2 space-y-3">
         {images.map((img, index) => (
           <div
             key={index}
-            className="border-3 break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
+            className=" break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
             onClick={() => setSelectedImage(img.src)}
           >
             <img

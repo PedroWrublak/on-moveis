@@ -2,13 +2,34 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 function PageHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+
+        if(currentScrollY < lastScrollY) {
+          setShowHeader(true);
+        } else {
+          setShowHeader(false);
+        }
+
+        setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="bg-[#FCFCFC] shadow-sm">
+    <header className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 bg-[#FCFCFC] shadow-sm ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="max-w-4xl h-[7rem] mx-auto px-4 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer">

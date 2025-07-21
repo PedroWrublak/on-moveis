@@ -12,7 +12,7 @@ const services = [
     description: "Praticidade, beleza e aproveitamento total do espaço.",
   },
   {
-    image: "/galery/living-room-ex.jpg",
+    image: "/banheiro-ex.jpg",
     title: "BANHEIROS",
     description: "Design clean, organização e sofisticação",
   },
@@ -22,7 +22,7 @@ const services = [
     description: "Planejados para otimizar espaço com conforto e personalidade",
   },
   {
-    image: "/galery/living-room-ex.jpg",
+    image: "/lavan-ex2.jpg",
     title: "LAVANDERIAS",
     description: "Lavanderias organizadas, funcionais e modernas",
   },
@@ -36,7 +36,7 @@ const services = [
 
 function Services() {
   return (
-    <div className="flex flex-col items-center p-20 bg-[#FCFCFC]">
+    <div className="flex flex-col items-center p-20 bg-[#e8e8e6]">
       <h2 className="text-3xl md:text-4xl text-center text-[#264653] font-serif mb-12 select-none">
         SERVIÇOS
       </h2>
