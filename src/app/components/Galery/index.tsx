@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
+import Image from 'next/image'
 
 const images = [
   { src: "/banheiro-ex.jpg", alt: "Projeto 1 ", span: 2 },
@@ -36,12 +37,14 @@ function Galery() {
               className=" break-inside-avoid overflow-hidden shadow hover:shadow-lg transition-shadow select-none"
               onClick={() => setSelectedImage(img.src)}
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
                 className={`w-full ${
                   img.span === 2 ? "h-[61rem]" : "h-[30rem]"
                 } object-cover rounded-xs hover:opacity-70 transition duration-300`}
+                width={800}
+                height={400}
                 loading="lazy" // Utilized to load the images after
               />
             </div>

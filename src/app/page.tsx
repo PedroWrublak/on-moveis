@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PageHeader from "./components/PageHeader";
 import HomeImage from "./components/HomeImage";
 import Services from "./components/Services";

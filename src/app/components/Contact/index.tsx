@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import { p } from "framer-motion/client";
 
 function Contact() {
   const [form, setForm] = useState({
