@@ -23,9 +23,9 @@ function Galery() {
   return (
     <section
       id="galery"
-      className="py-20 px-80 bg-gradient-to-b from-[#f5f5f5] to-[#eaeaea]"
+      className="py-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40 2xl:px-80 bg-gradient-to-b from-[#f5f5f5] to-[#eaeaea]"
     >
-      <h2 className="text-3xl md:text-4xl text-center text-[#545a5b] font-serif mb-12 select-none">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-[#545a5b] font-serif mb-12 select-none">
         GALERIA
       </h2>
 
@@ -41,7 +41,7 @@ function Galery() {
                 src={img.src}
                 alt={img.alt}
                 className={`w-full ${
-                  img.span === 2 ? "h-[61rem]" : "h-[30rem]"
+                  img.span === 2 ? "h-[61vh]" : "h-[30vh]" // Replace for REM if needed
                 } object-cover rounded-xs hover:opacity-70 transition duration-300`}
                 width={800}
                 height={400}

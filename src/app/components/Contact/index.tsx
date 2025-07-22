@@ -54,8 +54,8 @@ function Contact() {
 
   return (
     <section id="contact" className="scroll-mt-28">
-      <div className="bg-[#FCFCFC] p-20 max-w-3l mx-auto select-none">
-        <h2 className="text-3xl md:text-4xl text-center text-[#264653] font-serif mb-3">
+      <div className="bg-[#FCFCFC] px-4 py-10 sm:px-8 md:px-12 lg:px-20 mx-auto select-none">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-[#264653] font-serif mb-3">
           ENTRE EM CONTATO
         </h2>
         <p className="text-center text-[#264653] mb-12">
