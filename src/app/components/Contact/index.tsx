@@ -14,37 +14,39 @@ function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Dados do formulário: ", form);
 
     try {
-        const response = await emailjs.send(
-            "service_m2s1yar",
-            "template_au13kxn",
-            {
-                name: form.name,
-                email: form.email,
-                telefone: form.telefone,
-                ambiente: form.ambiente,
-                info: form.info
-            },
-            "oPlQGIylC90OJt4sP",
-        );
+      const response = await emailjs.send(
+        "service_m2s1yar",
+        "template_au13kxn",
+        {
+          name: form.name,
+          email: form.email,
+          telefone: form.telefone,
+          ambiente: form.ambiente,
+          info: form.info,
+        },
+        "oPlQGIylC90OJt4sP"
+      );
 
-        console.log("Email enviado:", response.status);
-        setSuccess(true);
-        setForm({name: "", email: "", telefone: "", ambiente: "", info: ""});
+      console.log("Email enviado:", response.status);
+      setSuccess(true);
+      setForm({ name: "", email: "", telefone: "", ambiente: "", info: "" });
     } catch (error) {
-        console.error("Erro ao enviar", error);
+      console.error("Erro ao enviar", error);
     }
   };
 
@@ -118,13 +120,15 @@ function Contact() {
           />
 
           <button
-          type="submit"
-          className="bg-[#01187F] text-white py-3 rounded-md font-semibold hover:opacity-70 transition"
+            type="submit"
+            className="bg-[#01187F] text-white py-3 rounded-md font-semibold hover:opacity-70 transition"
           >
             Enviar
           </button>
           {success && (
-            <p className="text-green-600 text-sm text-center font-medium">Mensagem enviada com sucesso! Entraremos em contato.</p>
+            <p className="text-green-600 text-sm text-center font-medium">
+              Mensagem enviada com sucesso! Entraremos em contato.
+            </p>
           )}
         </form>
       </div>

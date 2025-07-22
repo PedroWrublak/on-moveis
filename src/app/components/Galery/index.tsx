@@ -1,13 +1,11 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { span } from "framer-motion/client";
 import { X } from "lucide-react";
 import { useState } from "react";
 
 const images = [
   { src: "/banheiro-ex.jpg", alt: "Projeto 1 ", span: 2 },
-
   { src: "/galery/living-room-ex.jpg", alt: "Projeto 2 ", span: 1 },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 5 ", span: 1 },
   { src: "/galery/kitchen-ex.JPEG", alt: "Projeto 8 ", span: 1 },
