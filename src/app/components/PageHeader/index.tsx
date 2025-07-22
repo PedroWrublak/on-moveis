@@ -14,7 +14,9 @@ function PageHeader() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < lastScrollY) {
+      if (currentScrollY <= 0) {
+        setShowHeader(true);
+      } else if (currentScrollY < lastScrollY) {
         setShowHeader(true);
       } else {
         setShowHeader(false);
